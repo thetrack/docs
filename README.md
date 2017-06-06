@@ -28,5 +28,13 @@ TheTrack интегрируется в два простых шага:
 | **Trip** | Объект поездки содержит одно или несколько заданий и отслеживает весь путь водителя. |
 | **Destination** | Место назначение |
 
+---
+
+### Как с нами связаться
+
+[opoldushina@thetrack.io](mailto:opoldushina@thetrack.io) - По вопросам сотрудничества
+
+[tkozhevnikov@thetrack.io](mailto:tkozhevnikov@thetrack.io) - По техническим вопросам и поддержки
+
 
 
