@@ -1,9 +1,12 @@
 # Summary
 
 * [Введение](README.md)
-* [Мобильные SDK](chapter1.md)
-  * [Android SDK Водителя](chapter1/android-sdk-voditelya.md)
-* test
-* [API](api.md)
-  * [Аутентификация](api/autentifikatsiya.md)
+* [Мобильные SDK](mobile/README.md)
+  * [Android SDK Водителя](mobile/android-sdk-voditelya.md)
+* [API](api/README.md)
+  * [Базовая интеграция](api/base_integration.md)
+  * [Объекты](api/objects/README.md)
+    * [Driver](api/obekti/driver.md)
+    * [Location](api/obekti/location.md)
+    * [Task](api/obekti/task.md)
 
