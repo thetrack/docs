@@ -169,8 +169,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 ## HTTP-запрос
 POST https://api.thetrack.io/v1/drivers/DRIVER_ID/assign_tasks/
 ```javascript
-
-# Пример тела сообщения
+// Пример тела сообщения
 {
     "task_ids": ["72118cb0-7583-4829-936b-71c5bf4c75e3", "65555ffa-06b6-47ee-9b3c-943a03833090"]
 }
