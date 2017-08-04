@@ -162,3 +162,89 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 ```
 {% endmethod %}
 
+{% method -%}
+## Создание исполнителя {#driver-assign-task}
+Привязывает задачи к водителю.
+## HTTP-запрос
+POST https://api.thetrack.io/v1/drivers/DRIVER_ID/assign_tasks/
+```javascript
+{
+    "task_ids": ["72118cb0-7583-4829-936b-71c5bf4c75e3", "65555ffa-06b6-47ee-9b3c-943a03833090"]
+}
+```
+### Аргументы
+| Имя           | Описание      |
+| ------------- | ------------- |
+|**task_ids** <br/> *список* <br/> _Обязательный_|Список идентификаторов задач. <br/> |
+### Возвращает
+API возвращает объект исполнителя с заполненым полем active_tasks.
+```javascript
+{
+	"id": "875f2517-def3-4951-be01-3402eac6ea4d",
+	"active_tasks": [{
+			"id": "72118cb0-7583-4829-936b-71c5bf4c75e3",
+			"status": "assigned",
+			"action": "task",
+			"location": {
+				"id": "1a6502af-cbb2-4dfe-a5e9-e1bd2c76959c",
+				"address": "г. Москва. ул. Кунцевская 12",
+				"landmark": "",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						37.53752588703264,
+						55.79713792800458
+					]
+				}
+			},
+			"lookup_id": "",
+			"tracking_url": "http://eta.st/idjNbt"
+		},
+		{
+			"id": "65555ffa-06b6-47ee-9b3c-943a03833090",
+			"status": "assigned",
+			"action": "delivery",
+			"location": {
+				"id": "dcf61eb5-fa1b-44c9-be42-dc4ffc1c651b",
+				"address": "г. Москва. ш. Варшавское 44-3",
+				"landmark": "",
+				"point": {
+					"type": "Point",
+					"coordinates": [
+						55.657652,
+						37.685938
+					]
+				}
+			},
+			"lookup_id": "123",
+			"tracking_url": "http://eta.st/6HRKV3"
+		}
+	],
+	"name": "Иван Диктирёв",
+	"photo": null,
+	"phone": "+71234567890",
+	"vehicle_type": "car",
+	"location": {
+		"type": "Point",
+		"coordinates": []
+	},
+	"lookup_id": "your_internal_id"
+}
+```
+
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json" \
+   -X POST \
+   -d @body.json
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
+```
+{% endmethod %}
