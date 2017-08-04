@@ -17,24 +17,6 @@
 Создает новый объект исполнителя.
 ## HTTP-запрос
 POST https://api.thetrack.io/v1/drivers/
-### Возвращает
-API возвращает объект исполнителя с его идентификатором. Этот идентификатор может использоваться для извлечения этого же объекта водителя в будущем.
-```javascript
-{
-    "id": "875f2517-def3-4951-be01-3402eac6ea4d",
-    "active_tasks": [],
-    "name": "Иван Диктирёв",
-    "photo": null,
-    "phone": "+71234567890",
-    "vehicle_type": "car",
-    "location": {
-        "type": "Point",
-        "coordinates": []
-    },
-    "lookup_id": "your_internal_id"
-}
-```
-
 ### Аргументы
 | Имя           | Описание      |
 | ------------- | ------------- |
@@ -51,5 +33,22 @@ $ curl https://api.thetrack.io/v1/drivers/ \
    -H "Content-Type: application/json" \
    -X POST \
    -d @body.json
+```
+### Возвращает
+API возвращает объект исполнителя с его идентификатором. Этот идентификатор может использоваться для извлечения этого же объекта водителя в будущем.
+```javascript
+{
+    "id": "875f2517-def3-4951-be01-3402eac6ea4d",
+    "active_tasks": [],
+    "name": "Иван Диктирёв",
+    "photo": null,
+    "phone": "+71234567890",
+    "vehicle_type": "car",
+    "location": {
+        "type": "Point",
+        "coordinates": []
+    },
+    "lookup_id": "your_internal_id"
+}
 ```
 {% endmethod %}
