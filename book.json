@@ -5,5 +5,8 @@
             "theme": "light",
             "split": true
         }
+        "page-toc": {
+            "selector": ".markdown-section h2"
+        }
     }
 }
