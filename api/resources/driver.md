@@ -12,8 +12,17 @@
 |**lookup_id** <br/> *string*|Уникальный идентификатор, который можно добавить в информацию о водителе. Вы можете записать сюда свой внутрениий идентификатор|
 |**active_tasks** <br/> *Json*|Список активный задач|
 |**created** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-## Создание исполнителя
+{% method -%}
+## Создание исполнителя {#create}
 
+The first thing is to get the GitBook API client.
+
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json" \
+   -X POST \
+   -d @body.json
 ```
-curl
-```
+{% endmethod %}
