@@ -163,7 +163,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 {% endmethod %}
 
 {% method -%}
-## Создание исполнителя {#driver-assign-task}
+## Привязка задач к исполнителю {#driver-assign-task}
 Привязывает задачи к водителю.
 
 ## HTTP-запрос
