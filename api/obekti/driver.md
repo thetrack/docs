@@ -1,36 +1,16 @@
 # Исполнитель \(Driver\)
-
 ---
-
-```
 {% method -%}
-```
-
-{% method -%}
-
-\#\# Install {\#install}
-
-
-
+## Install {#install}
 The first thing is to get the GitBook API client.
 
-
-
 {% sample lang="js" -%}
-
-\`\`\`bash
-
+```bash
 $ npm install gitbook-api
-
-\`\`\`
+```
 
 {% sample lang="go" -%}
-
-\`\`\`bash
-
+```bash
 $ go get github.com/GitbookIO/go-gitbook-api
-
-\`\`\`
-
+```
 {% endmethod %}
-
