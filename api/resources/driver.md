@@ -12,6 +12,7 @@
 |**lookup_id** <br/> *string*|Уникальный идентификатор, который можно добавить в информацию о водителе. Вы можете записать сюда свой внутрениий идентификатор|
 |**active_tasks** <br/> *Json*|Список активный задач|
 |**created** <br/> *String ISO8601 Datetime*|Дата создания объекта|
+
 {% method -%}
 ## Создание исполнителя {#POST}
 Создает новый объект исполнителя.
@@ -59,3 +60,42 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 >>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
 ```
 {% endmethod %}
+
+{% method -%}
+## Получение исполнителя {#GET}
+Получает ранее созданный объект исполнителя.
+## HTTP-запрос
+GET https://api.thetrack.io/v1/drivers/DRIVER_ID/
+### Возвращает
+API возвращает ранее созданный объект исполнителя.
+```javascript
+{
+    "id": "875f2517-def3-4951-be01-3402eac6ea4d",
+    "active_tasks": [],
+    "name": "Иван Диктирёв",
+    "photo": null,
+    "phone": "+71234567890",
+    "vehicle_type": "car",
+    "location": {
+        "type": "Point",
+        "coordinates": []
+    },
+    "lookup_id": "your_internal_id"
+}
+
+```
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json"
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.get("https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/", headers=headers)
+```
+{% endmethod %}
+
