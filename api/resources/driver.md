@@ -25,22 +25,6 @@ POST https://api.thetrack.io/v1/drivers/
 |**photo** <br/> *string* _Необязательный_|Ссылка на фото или иконку исполнителя|
 |**vehicle_type** <br/> *string* _Необязательный_| Тип транспортного средства по умолчанию|
 |**lookup_id** <br/> *string* _Необязательный_|Уникальный идентификатор, который можно добавить в информацию о водителе. Вы можете записать сюда свой внутрениий идентификатор|
-
-{% sample lang="curl" -%}
-```bash
-$ curl https://api.thetrack.io/v1/drivers/ \
-   -H "Authorization: token sk_token" \
-   -H "Content-Type: application/json" \
-   -X POST \
-   -d @body.json
-```
-
-{% sample lang="python" -%}
-```python
->>> import requests
->>> headers = {'Authorization': 'sk_token'}
->>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
-```
 ### Возвращает
 API возвращает объект исполнителя с его идентификатором. Этот идентификатор может использоваться для извлечения этого же объекта водителя в будущем.
 ```javascript
@@ -57,5 +41,21 @@ API возвращает объект исполнителя с его иден�
     },
     "lookup_id": "your_internal_id"
 }
+
+```
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json" \
+   -X POST \
+   -d @body.json
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
 ```
 {% endmethod %}
