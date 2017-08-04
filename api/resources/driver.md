@@ -13,6 +13,7 @@
 |**active_tasks** <br/> *Json*|Список активный задач|
 |**created** <br/> *String ISO8601 Datetime*|Дата создания объекта|
 ## Создание исполнителя
-```ruby
+
+```
 curl
 ```
