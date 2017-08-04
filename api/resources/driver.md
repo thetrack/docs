@@ -19,6 +19,21 @@
 POST https://api.thetrack.io/v1/drivers/
 ### Возвращает
 Созданный объект исполнителя.
+```javascript
+{
+    "id": "875f2517-def3-4951-be01-3402eac6ea4d",
+    "active_tasks": [],
+    "name": "Иван Диктирёв",
+    "photo": null,
+    "phone": "+71234567890",
+    "vehicle_type": "car",
+    "location": {
+        "type": "Point",
+        "coordinates": []
+    },
+    "lookup_id": "your_internal_id"
+}
+```
 
 ### Аргументы
 | Имя           | Описание      |
