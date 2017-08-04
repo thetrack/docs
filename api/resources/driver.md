@@ -14,7 +14,7 @@
 |**created** <br/> *String ISO8601 Datetime*|Дата создания объекта|
 
 {% method -%}
-## Создание исполнителя {#POST}
+## Создание исполнителя {#driver-create}
 Создает новый объект исполнителя.
 ## HTTP-запрос
 POST https://api.thetrack.io/v1/drivers/
@@ -62,7 +62,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 {% endmethod %}
 
 {% method -%}
-## Получение исполнителя {#GET}
+## Получение исполнителя {#driver-retrieve}
 Получает ранее созданный объект исполнителя.
 ## HTTP-запрос
 GET https://api.thetrack.io/v1/drivers/DRIVER_ID/
@@ -83,6 +83,68 @@ API возвращает ранее созданный объект исполн
     "lookup_id": "your_internal_id"
 }
 
+```
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json"
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.get("https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/", headers=headers)
+```
+{% endmethod %}
+
+{% method -%}
+## Получение списка всех исполнителей {#driver-list}
+Получает список всех доступных исполнителей.
+## HTTP-запрос
+GET https://api.thetrack.io/v1/drivers/
+### Возвращает
+API возвращает ранее созданный объект исполнителя.
+```javascript
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": "875f2517-def3-4951-be01-3402eac6ea4d",
+            "active_tasks": [],
+            "name": "Иван Диктирёв",
+            "photo": null,
+            "phone": "+71234567890",
+            "vehicle_type": "car",
+            "location": {
+                "type": "Point",
+                "coordinates": []
+            },
+            "lookup_id": "1232",
+            "created": "2017-08-03T14:14:12.992602Z"
+        },
+        {
+            "id": "a0cd9595-4ba8-45d2-b1d6-3e49ccf50c69",
+            "active_tasks": [],
+            "name": "Василий Лобанов",
+            "photo": null,
+            "phone": "+71234567890",
+            "vehicle_type": "car",
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    37.58158653451538,
+                    55.71143605680116
+                ]
+            },
+            "lookup_id": "123",
+            "created": "2017-07-28T10:25:14.912898Z"
+        }
+    ]
+}
 ```
 {% sample lang="curl" -%}
 ```bash
