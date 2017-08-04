@@ -149,7 +149,7 @@ API возвращает ранее созданные объекты испол
 ```
 {% sample lang="curl" -%}
 ```bash
-$ curl https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/ \
+$ curl https://api.thetrack.io/v1/drivers/ \
    -H "Authorization: token sk_token" \
    -H "Content-Type: application/json"
 ```
@@ -158,7 +158,7 @@ $ curl https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/ 
 ```python
 >>> import requests
 >>> headers = {'Authorization': 'token sk_token'}
->>> r = requests.get("https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/", headers=headers)
+>>> r = requests.get("https://api.thetrack.io/v1/drivers/", headers=headers)
 ```
 {% endmethod %}
 
