@@ -24,31 +24,6 @@
 |**driver_id** <br/> *String ISO8601 Datetime*|Дата создания объекта|
 |**tracking_url** <br/> *String ISO8601 Datetime*|Дата создания объекта|
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {% method -%}
 ## Создание исполнителя {#driver-create}
 Создает новый объект исполнителя.
