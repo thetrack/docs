@@ -12,7 +12,7 @@
 
 ```bash
 curl https://api.thetrack.io/v1/drivers/ \
-   -H "Authorization: token <your_secret_key>" \
+   -H "Authorization: token sk_token" \
    -H "Content-Type: application/json" \
    -X POST \
    -d @body.json
@@ -42,7 +42,7 @@ API возвращает объект исполнителя с его иден�
 
 ```bash
 curl https://api.thetrack.io/v1/tasks/ \
-   -H "Authorization: token <your_secret_key>" \
+   -H "Authorization: token sk_token" \
    -H "Content-Type: application/json" \
    -X POST \
    -d @body.json
@@ -90,7 +90,7 @@ curl https://api.thetrack.io/v1/tasks/ \
 
 ```bash
 curl https://api.thetrack.io/v1/drivers/<DRIVER_ID>/assign_tasks/ \
-   -H "Authorization: token <your_secret_key>" \
+   -H "Authorization: token sk_token" \
    -H "Content-Type: application/json" \
    -X POST \
    -d @body.json
