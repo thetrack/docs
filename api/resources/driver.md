@@ -17,7 +17,7 @@
 {% method -%}
 ## Создание исполнителя {#driver-create}
 Создает новый объект исполнителя.
-## HTTP-запрос
+### HTTP-запрос
 POST https://api.thetrack.io/v1/drivers/
 ### Аргументы
 | Имя           | Описание      |
@@ -65,7 +65,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 {% method -%}
 ## Получение исполнителя {#driver-retrieve}
 Получает ранее созданный объект исполнителя.
-## HTTP-запрос
+### HTTP-запрос
 GET https://api.thetrack.io/v1/drivers/DRIVER_ID/
 ### Возвращает
 API возвращает ранее созданный объект исполнителя.
@@ -103,7 +103,7 @@ $ curl https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/ 
 {% method -%}
 ## Получение списка всех исполнителей {#driver-list}
 Получает список всех доступных исполнителей.
-## HTTP-запрос
+### HTTP-запрос
 GET https://api.thetrack.io/v1/drivers/
 ### Возвращает
 API возвращает ранее созданные объекты исполнителей. За один раз выводится по 50 записей. Для запроса следуйщих записей необходимо добавить номер страницы в параметры GET запроса вида `?page=N`. Поле `count` означает общее кол-во записей.
@@ -167,7 +167,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 ## Привязка задач к исполнителю {#driver-assign-task}
 Привязывает задачи к водителю.
 
-## HTTP-запрос
+### HTTP-запрос
 POST https://api.thetrack.io/v1/drivers/DRIVER_ID/assign_tasks/
 ```javascript
 // Пример тела сообщения
