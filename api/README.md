@@ -29,5 +29,17 @@ curl https://api.thetrack.io/v1/drivers/ \
    -H "Content-Type: application/json"
 ```
 
+## Формат запроса и ответа
+
+Thetrack API поддерживает формат JSON, поэтому во время запроса убедитесь в корректности заголовка **Content-Type.**
+
+```bash
+curl https://api.thetrack.io/v1/drivers/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json" \
+   -X POST \
+   -d @body.json
+```
+
 
 
