@@ -34,6 +34,14 @@ $ curl https://api.thetrack.io/v1/drivers/ \
    -X POST \
    -d @body.json
 ```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
+```
+
 ### Возвращает
 API возвращает объект исполнителя с его идентификатором. Этот идентификатор может использоваться для извлечения этого же объекта водителя в будущем.
 ```javascript
