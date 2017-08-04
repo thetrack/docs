@@ -55,7 +55,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 {% sample lang="python" -%}
 ```python
 >>> import requests
->>> headers = {'Authorization': 'sk_token'}
+>>> headers = {'Authorization': 'token sk_token'}
 >>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
 ```
 {% endmethod %}
