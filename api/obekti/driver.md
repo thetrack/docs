@@ -4,21 +4,16 @@
 ## Поля
 | Поле          | Описание      |
 | ------------- | ------------- |
-| **name** <br/> *string* | Имя исполнителя или идентификатор устройства |
-| **phone** <br/> *string* | Номер телефона |
+|**name** <br/> *string*|Имя исполнителя или идентификатор устройства|
+|**phone** <br/> *string*|Номер телефона|
+|**photo** <br/> *string*|Ссылка на фото или иконку исполнителя|
+|**location** <br/> *GeoJson*|Текущее местоположение водителя|
 |**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
-
-{% method -%}
-## Install {#install}
-The first thing is to get the GitBook API client.
-
-{% sample lang="js" -%}
-```bash
-$ npm install gitbook-api
-```
-
-{% sample lang="go" -%}
-```bash
-$ go get github.com/GitbookIO/go-gitbook-api
-```
-{% endmethod %}
+|**lookup_id** <br/> *string*|Уникальный идентификатор, который можно добавить в информацию о водителе. Как правило, он будет равен идентификатору вашего водителя.|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
+|**vehicle_type** <br/> *string*| Тип транспортного средства по умолчанию|
