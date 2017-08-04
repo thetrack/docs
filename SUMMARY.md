@@ -6,7 +6,7 @@
 * [API](api/README.md)
   * [Базовая интеграция](api/base_integration.md)
   * [Ресурсы](api/resources/README.md)
-    * [Driver](api/obekti/driver.md)
-    * [Location](api/obekti/location.md)
-    * [Task](api/obekti/task.md)
+    * [Driver](api/resources/driver.md)
+    * [Location](api/resources/location.md)
+    * [Task](api/resources/task.md)
 
