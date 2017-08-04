@@ -239,7 +239,7 @@ API возвращает объект исполнителя с заполнен
 
 {% sample lang="curl" -%}
 ```bash
-$ curl https://api.thetrack.io/v1/drivers/ \
+$ curl https://api.thetrack.io/v1/drivers/assign_tasks/ \
    -H "Authorization: token sk_token" \
    -H "Content-Type: application/json" \
    -X POST \
@@ -250,6 +250,6 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 ```python
 >>> import requests
 >>> headers = {'Authorization': 'token sk_token'}
->>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=params, headers=headers)
+>>> r = requests.post("https://api.thetrack.io/v1/drivers/assign_tasks/", json=params, headers=headers)
 ```
 {% endmethod %}
