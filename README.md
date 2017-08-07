@@ -10,7 +10,7 @@
 
 {% method -%}
 {% common -%}
-![image](/assets/eta.st-zxxU7Z\(iPhone 6\).png)
+![image](/assets/eta.st.png)
 {% endmethod %}
 
 #### Отслеживание задач
