@@ -150,6 +150,21 @@ $ curl https://api.thetrack.io/v1/tasks/TASK_ID/ \
 Получает список задач.
 ### HTTP-запрос
 GET https://api.thetrack.io/v1/tasks/
+### Фильтры
+При получении списка задач можно отфильтровать задачи по определенному критерию. Для этого нужно передать название фильтра и его значения в параметры GET запроса.
+
+| Фильтр        | Описание      |
+| ------------- | ------------- |
+|**min_date** <br/> *String ISO8601 Datetime*|Нижняя граница выборки по времени|
+|**max_date** <br/> *String ISO8601 Datetime*|Верхняя граница выборки по времени|
+|**driver_id** <br/> *String*|Фильтрует выборку по водителю|
+|**not_assigned** <br/> *String [true\|false]*|Если указан true возвращает только не привязанные задачи. Если указан false, возвращает только привязанные задачи к водителю |
+|**progress** <br/> *String*|Фильтрует по полю **progress**|
+|**status** <br/> *String*|Фильтрует по полю **status**|
+|**lookup_id** <br/> *String*|Фильтрует по полю **lookup_id**|
+
+Например: Запрос `GET https://api.thetrack.io/v1/tasks/?driver_id=5958f67b-6a36-44f1-acf1-027ce93cbb8e&status=canceled` вернет все отмененные задачи привязанные к воителю с id `5958f67b-6a36-44f1-acf1-027ce93cbb8e`.
+
 ### Возвращает
 API возвращает ранее созданные объекты задач. Использует [Пагинатор](/api/README.md#api-pagination)
 ```javascript
