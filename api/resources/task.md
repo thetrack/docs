@@ -94,6 +94,7 @@ $ curl https://api.thetrack.io/v1/tasks/ \
 ```
 {% endmethod %}
 
+{% method -%}
 ## Получение задачи {#task-retrieve}
 Получает ранее созданный объект задачи.
 ### HTTP-запрос
