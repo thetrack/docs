@@ -5,10 +5,10 @@
 ## Поля {#fields}
 | Поле          | Описание      |
 | ------------- | ------------- |
-|**id** <br/> *string*|Идентификатор задачи|
-|**action** <br/> *string*|Действие. Возможные варианты: **task**, **pickup**, **delivery**, **visit**. По умолчанию **task**|
-|**status** <br/> *string*|Текущий статус задачи|
-|**progress** <br/> *string*|Текущий прогресс выполнения задачи|
+|**id** <br/> *String*|Идентификатор задачи|
+|**action** <br/> *String*|Действие. Возможные варианты: **task**, **pickup**, **delivery**, **visit**. По умолчанию **task**|
+|**status** <br/> *String*|Текущий статус задачи|
+|**progress** <br/> *String*|Текущий прогресс выполнения задачи|
 |**start_location** <br/> *Json*|Местоположение исполнителя в момент начала задачи|
 |**completion_location** <br/> *Json*|Местоположение водителя в момент окончания задачи|
 |**cancellation_location** <br/> *Json*|Местоположение водителя в момент отмены задачи|
@@ -24,8 +24,9 @@
 |**lookup_id** <br/> *String*|Уникальный идентификатор, который можно добавить в информацию о задачи. Вы можете записать сюда свой внутренний идентификатор|
 |**driver_id** <br/> *String*|Id исполнителя задачи|
 |**tracking_url** <br/> *String*|Короткая ссылка на браузерную версию карты с отслеживанием текущей задачи.|
-## Поле action {#task-status-and-progress-fields}
-## Поля status и progress {#task-status-and-progress-fields}
+## Поле action {#task-action}
+## Поле status {#task-status}
+## Поле progress {#task-progress}
 
 {% method -%}
 ## Создание исполнителя {#driver-create}
