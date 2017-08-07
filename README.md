@@ -10,7 +10,6 @@
 
 {% method -%}
 {% common -%}
-![image](/assets/eta.st.png)
 <img src="../assets/eta.st.png" alt="traking">
 {% endmethod %}
 
