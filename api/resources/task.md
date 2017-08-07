@@ -255,7 +255,7 @@ POST https://api.thetrack.io/v1/tasks/TASK_ID/complete/
 |**completion_time** <br/> *String ISO8601 Datetime*|Время завершения задачи. Если поле не указано то по умолчанию текущее время|
 
 ### Возвращает
-Возвращает завершенный объект задачи с заполненым
+Возвращает завершенный объект задачи.
 ```javascript
 {
     "id": "5958f67b-6a36-44f1-acf1-027ce93cbb8e",
@@ -305,5 +305,70 @@ $ curl https://api.thetrack.io/v1/tasks/TASK_ID/complete/ \
 >>> import requests
 >>> headers = {'Authorization': 'token sk_token'}
 >>> r = requests.post("https://api.thetrack.io/v1/tasks/TASK_ID/complete/", json=params, headers=headers)
+```
+{% endmethod %}
+
+{% method -%}
+## Отмена задачи {#task-cancel}
+Отменяет задачу в указанном месте и времени.
+### HTTP-запрос
+POST https://api.thetrack.io/v1/tasks/TASK_ID/cancel/
+### Аргументы
+| Имя           | Описание      |
+| ------------- | ------------- |
+|**cancellation_location** <br/> *Json* _Необязательно_|Место отмены задачи. Формат такой же как и при создании объекта [Location](/api/resources/location.md).|
+|**concellation_time** <br/> *String ISO8601 Datetime*|Время отмены задачи. Если поле не указано то по умолчанию текущее время|
+
+### Возвращает
+Возвращает завершенный объект задачи.
+```javascript
+{
+    "id": "5958f67b-6a36-44f1-acf1-027ce93cbb8e",
+    "driver_id": "a0cd9595-4ba8-45d2-b1d6-3e49ccf50c69",
+    "status": "canceled",
+    "progress": "on_the_way",
+    "action": "task",
+    "location": {
+        "id": "1a6502af-cbb2-4dfe-a5e9-e1bd2c76959c",
+        "address": "Mail.ru",
+        "landmark": "",
+        "point": {
+            "type": "Point",
+            "coordinates": [
+                37.53752588703264,
+                55.79713792800458
+            ]
+        }
+    },
+    "location_id": "1a6502af-cbb2-4dfe-a5e9-e1bd2c76959c",
+    "start_location": null,
+    "completion_location": null,
+    "cancellation_location": null,
+    "start_time": "2017-08-01T17:57:53.875350Z",
+    "completion_time": null,
+    "cancellation_time": "2017-08-07T12:12:07.939057Z",
+    "eta": "2017-08-01T19:06:05.022000Z",
+    "initial_eta": "2017-08-01T19:06:05.022000Z",
+    "commited_eta": "2017-08-01T19:06:05.022000Z",
+    "track": null,
+    "distance": null,
+    "lookup_id": "",
+    "tracking_url": "http://eta.st/A8MEQc"
+}
+```
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/tasks/TASK_ID/cancel/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json" \
+   -X POST \
+   -d @body.json
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/tasks/TASK_ID/cancel/", json=params, headers=headers)
 ```
 {% endmethod %}
