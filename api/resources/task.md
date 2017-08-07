@@ -145,7 +145,7 @@ $ curl https://api.thetrack.io/v1/tasks/TASK_ID/ \
 {% endmethod %}
 
 {% method -%}
-## Получение списка всех исполнителей {#task-list}
+## Получение списка всех задач {#task-list}
 Получает список всех задач.
 ### HTTP-запрос
 GET https://api.thetrack.io/v1/tasks/
@@ -153,40 +153,75 @@ GET https://api.thetrack.io/v1/tasks/
 API возвращает ранее созданные объекты задач. Использует [Пагинатор](/api/README.md#api-pagination)
 ```javascript
 {
-    "count": 94,
-    "next": "http://localhost:8000/api/v1/drivers/?page=2",
-    "previous": null,
+    "count": 100,
+    "next": "https://api.thetrack.io/v1/tasks/?page=3",
+    "previous": "https://api.thetrack.io/v1/tasks/?page=1",
     "results": [
         {
-            "id": "875f2517-def3-4951-be01-3402eac6ea4d",
-            "active_tasks": [],
-            "name": "Иван Диктирёв",
-            "photo": null,
-            "phone": "+71234567890",
-            "vehicle_type": "car",
+            "id": "5958f67b-6a36-44f1-acf1-027ce93cbb8e",
+            "driver_id": "a0cd9595-4ba8-45d2-b1d6-3e49ccf50c69",
+            "status": "started",
+            "progress": "on_the_way",
+            "action": "task",
             "location": {
-                "type": "Point",
-                "coordinates": []
+                "id": "1a6502af-cbb2-4dfe-a5e9-e1bd2c76959c",
+                "address": "Mail.ru",
+                "landmark": "",
+                "point": {
+                    "type": "Point",
+                    "coordinates": [
+                        37.53752588703264,
+                        55.79713792800458
+                    ]
+                }
             },
-            "lookup_id": "1232",
-            "created": "2017-08-03T14:14:12.992602Z"
+            "location_id": "1a6502af-cbb2-4dfe-a5e9-e1bd2c76959c",
+            "start_location": null,
+            "completion_location": null,
+            "cancellation_location": null,
+            "start_time": "2017-08-01T17:57:53.875350Z",
+            "completion_time": null,
+            "cancellation_time": null,
+            "eta": "2017-08-01T19:06:05.022000Z",
+            "initial_eta": "2017-08-01T19:06:05.022000Z",
+            "commited_eta": "2017-08-01T19:06:05.022000Z",
+            "track": null,
+            "distance": null,
+            "lookup_id": "",
+            "tracking_url": "http://eta.st/A8MEQc"
         },
         {
-            "id": "a0cd9595-4ba8-45d2-b1d6-3e49ccf50c69",
-            "active_tasks": [],
-            "name": "Василий Лобанов",
-            "photo": null,
-            "phone": "+71234567890",
-            "vehicle_type": "car",
+            "id": "d06da4f4-1c19-4d68-9ef6-bc16de5eedbf",
+            "driver_id": "a0cd9595-4ba8-45d2-b1d6-3e49ccf50c69",
+            "status": "assigned",
+            "progress": "pending",
+            "action": "task",
             "location": {
-                "type": "Point",
-                "coordinates": [
-                    37.58158653451538,
-                    55.71143605680116
-                ]
+                "id": "ab39333f-11f8-43a4-8b0c-ac2b14a54e6c",
+                "address": "Ярославское шоссе 22к3",
+                "landmark": "Дом",
+                "point": {
+                    "type": "Point",
+                    "coordinates": [
+                        37.685916418553106,
+                        55.856715713580826
+                    ]
+                }
             },
-            "lookup_id": "123",
-            "created": "2017-07-28T10:25:14.912898Z"
+            "location_id": "ab39333f-11f8-43a4-8b0c-ac2b14a54e6c",
+            "start_location": null,
+            "completion_location": null,
+            "cancellation_location": null,
+            "start_time": null,
+            "completion_time": null,
+            "cancellation_time": null,
+            "eta": "2017-08-01T19:31:33.022000Z",
+            "initial_eta": "2017-08-01T19:31:33.022000Z",
+            "commited_eta": "2017-08-01T19:31:33.022000Z",
+            "track": null,
+            "distance": null,
+            "lookup_id": "",
+            "tracking_url": "http://eta.st/MiA7kD"
         },
         ...
     ]
@@ -194,7 +229,7 @@ API возвращает ранее созданные объекты задач
 ```
 {% sample lang="curl" -%}
 ```bash
-$ curl https://api.thetrack.io/v1/drivers/ \
+$ curl https://api.thetrack.io/v1/tasks/ \
    -H "Authorization: token sk_token" \
    -H "Content-Type: application/json"
 ```
@@ -203,6 +238,6 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 ```python
 >>> import requests
 >>> headers = {'Authorization': 'token sk_token'}
->>> r = requests.get("https://api.thetrack.io/v1/drivers/", headers=headers)
+>>> r = requests.get("https://api.thetrack.io/v1/tasks/", headers=headers)
 ```
 {% endmethod %}
