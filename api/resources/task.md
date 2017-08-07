@@ -7,8 +7,8 @@
 | ------------- | ------------- |
 |**id** <br/> *String*|Идентификатор задачи|
 |**action** <br/> *String*|Действие. Возможные варианты: **task**, **pickup**, **delivery**, **visit**. По умолчанию **task**|
-|**status** <br/> *String*|Текущий статус задачи|
-|**progress** <br/> *String*|Текущий прогресс выполнения задачи|
+|**status** <br/> *String*|Текущий статус задачи. Варианты: **pending**, **assigned**, **in_queue**, **started**, **completed**, **canceled**, **suspended**|
+|**progress** <br/> *String*|Текущий прогресс выполнения задачи. Варианты: **pending**, **on_the_way**, **arriving**, **arrived**|
 |**start_location** <br/> *Json*|Местоположение исполнителя в момент начала задачи. Возвращает объект Location|
 |**completion_location** <br/> *Json*|Местоположение водителя в момент окончания задачи. Возвращает объект Location|
 |**cancellation_location** <br/> *Json*|Местоположение водителя в момент отмены задачи. Возвращает объект Location|
@@ -27,6 +27,7 @@
 |**tracking_url** <br/> *String*|Короткая ссылка на браузерную версию карты с отслеживанием текущей задачи.|
 
 ## Поле action {#task-action}
+Это поле обозначает действие выполняемое в задачи.
 ## Поле status {#task-status}
 ## Поле progress {#task-progress}
 
