@@ -144,5 +144,65 @@ $ curl https://api.thetrack.io/v1/tasks/TASK_ID/ \
 ```
 {% endmethod %}
 
+{% method -%}
+## Получение списка всех исполнителей {#task-list}
+Получает список всех задач.
+### HTTP-запрос
+GET https://api.thetrack.io/v1/tasks/
+### Возвращает
+API возвращает ранее созданные объекты задач. За один раз выводится по 50 записей. Для запроса следующих записей необходимо добавить номер страницы в параметры GET запроса вида `?page=N`. Поле `count` означает общее кол-во записей.
+```javascript
+{
+    "count": 94,
+    "next": "http://localhost:8000/api/v1/drivers/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": "875f2517-def3-4951-be01-3402eac6ea4d",
+            "active_tasks": [],
+            "name": "Иван Диктирёв",
+            "photo": null,
+            "phone": "+71234567890",
+            "vehicle_type": "car",
+            "location": {
+                "type": "Point",
+                "coordinates": []
+            },
+            "lookup_id": "1232",
+            "created": "2017-08-03T14:14:12.992602Z"
+        },
+        {
+            "id": "a0cd9595-4ba8-45d2-b1d6-3e49ccf50c69",
+            "active_tasks": [],
+            "name": "Василий Лобанов",
+            "photo": null,
+            "phone": "+71234567890",
+            "vehicle_type": "car",
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    37.58158653451538,
+                    55.71143605680116
+                ]
+            },
+            "lookup_id": "123",
+            "created": "2017-07-28T10:25:14.912898Z"
+        },
+        ...
+    ]
+}
+```
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json"
+```
 
-
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.get("https://api.thetrack.io/v1/drivers/", headers=headers)
+```
+{% endmethod %}
