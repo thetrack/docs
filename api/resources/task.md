@@ -158,7 +158,7 @@ GET https://api.thetrack.io/v1/tasks/
 |**min_date** <br/> *String ISO8601 Datetime*|Нижняя граница выборки по времени|
 |**max_date** <br/> *String ISO8601 Datetime*|Верхняя граница выборки по времени|
 |**driver_id** <br/> *String*|Фильтрует выборку по водителю|
-|**not_assigned** <br/> *String [true\|false]*|Если указан true возвращает только не привязанные задачи. Если указан false, возвращает только привязанные задачи к водителю |
+|**not_assigned** <br/> *String (true, false)*|Если указан true возвращает только не привязанные задачи. Если указан false, возвращает только привязанные задачи к водителю |
 |**progress** <br/> *String*|Фильтрует по полю **progress**|
 |**status** <br/> *String*|Фильтрует по полю **status**|
 |**lookup_id** <br/> *String*|Фильтрует по полю **lookup_id**|
