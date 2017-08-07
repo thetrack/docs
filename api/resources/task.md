@@ -94,3 +94,54 @@ $ curl https://api.thetrack.io/v1/tasks/ \
 ```
 {% endmethod %}
 
+## Получение задачи {#task-retrieve}
+Получает ранее созданный объект задачи.
+### HTTP-запрос
+GET https://api.thetrack.io/v1/tasks/TASK_ID/
+### Возвращает
+API возвращает ранее созданный объект.
+```javascript
+{
+    "id": "59b5ac60-0c17-4010-85c1-204dd8f44eac",
+    "driver_id": null,
+    "status": "pending",
+    "progress": "pending",
+    "action": "delivery",
+    "location": {
+        "id": "27510977-acd1-4ab6-ac32-a6d2b073ce0e",
+        "address": "ш. Волоколамское 33",
+        "landmark": "",
+        "point": null
+    },
+    "location_id": "27510977-acd1-4ab6-ac32-a6d2b073ce0e",
+    "start_location": null,
+    "completion_location": null,
+    "cancellation_location": null,
+    "start_time": null,
+    "completion_time": null,
+    "cancellation_time": null,
+    "eta": null,
+    "initial_eta": null,
+    "commited_eta": null,
+    "track": null,
+    "distance": null,
+    "lookup_id": "1233",
+    "tracking_url": "http://eta.st/ShaUJe"
+}
+```
+{% sample lang="curl" -%}
+```bash
+$ curl https://api.thetrack.io/v1/tasks/TASK_ID/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json"
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.get("https://api.thetrack.io/v1/tasks/TASK_ID/", headers=headers)
+```
+{% endmethod %}
+
+
