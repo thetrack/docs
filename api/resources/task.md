@@ -163,7 +163,7 @@ GET https://api.thetrack.io/v1/tasks/
 |**status** <br/> *String*|Фильтрует по полю **status**|
 |**lookup_id** <br/> *String*|Фильтрует по полю **lookup_id**|
 
-Например: Запрос `GET https://api.thetrack.io/v1/tasks/?driver_id=5958f67b-6a36-44f1-acf1-027ce93cbb8e&status=canceled` вернет все отмененные задачи привязанные к воителю с id `5958f67b-6a36-44f1-acf1-027ce93cbb8e`.
+Например: Запрос `GET https://api.thetrack.io/v1/tasks/?driver_id=5958f67b-6a36-44f1-acf1-027ce93cbb8e&status=canceled` вернет все отмененные задачи привязанные к исполнителю с id `5958f67b-6a36-44f1-acf1-027ce93cbb8e`.
 
 ### Возвращает
 API возвращает ранее созданные объекты задач. Использует [Пагинатор](/api/README.md#api-pagination)
