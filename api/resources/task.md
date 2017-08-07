@@ -6,23 +6,26 @@
 | Поле          | Описание      |
 | ------------- | ------------- |
 |**id** <br/> *string*|Идентификатор задачи|
-|**action** <br/> *string*|Имя исполнителя или название устройства|
-|**status** <br/> *string*|Номер телефона в формате **E164**|
-|**start_location** <br/> *string*|Ссылка на фото или иконку исполнителя|
-|**completion_location** <br/> *GeoJson*|Текущее местоположение водителя|
-|**cancellation_location** <br/> *string*| Тип транспортного средства по умолчанию. Возможные варианты: **car** - авто транспорт, **transit** - пеший исполнитель|
-|**start_time** <br/> *string*|Уникальный идентификатор, который можно добавить в информацию о водителе. Вы можете записать сюда свой внутренний идентификатор|
-|**completion_time** <br/> *Json*|Список активный задач|
-|**cancellation_time** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**location** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**location_id** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**eta** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**initial_eta** <br/> *string*|Уникальный идентификатор, который можно добавить в информацию о водителе. Вы можете записать сюда свой внутренний идентификатор|
-|**commited_eta** <br/> *Json*|Список активный задач|
-|**track** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**lookup_id** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**driver_id** <br/> *String ISO8601 Datetime*|Дата создания объекта|
-|**tracking_url** <br/> *String ISO8601 Datetime*|Дата создания объекта|
+|**action** <br/> *string*|Действие. Возможные варианты: **task**, **pickup**, **delivery**, **visit**. По умолчанию **task**|
+|**status** <br/> *string*|Текущий статус задачи|
+|**progress** <br/> *string*|Текущий прогресс выполнения задачи|
+|**start_location** <br/> *Json*|Местоположение исполнителя в момент начала задачи|
+|**completion_location** <br/> *Json*|Местоположение водителя в момент окончания задачи|
+|**cancellation_location** <br/> *Json*|Местоположение водителя в момент отмены задачи|
+|**start_time** <br/> *String ISO8601 Datetime*|Время начала задачи|
+|**completion_time** <br/> *String ISO8601 Datetime*|Время завершения задачи|
+|**cancellation_time** <br/> *String ISO8601 Datetime*|Время отмены задачи|
+|**location** <br/> *Json*|Место назначение задачи|
+|**location_id** <br/> *String*|Id объекта местоназначения|
+|**eta** <br/> *String ISO8601 Datetime*|Ожидаемое время прибытия исполнителя в место назначения задачи|
+|**initial_eta** <br/> *String ISO8601 Datetime*|Ожидаемое время прибытия исполнителя в место назначения задачи вычисленное в начале задачи|
+|**commited_eta** <br/> *String ISO8601 Datetime*|Список активный задач|
+|**track** <br/> *GeoJson*|Трек пройденный исполнителем по этой задачи. Возвращает GeoJson типа LineString c списком гео точек.|
+|**lookup_id** <br/> *String*|Уникальный идентификатор, который можно добавить в информацию о задачи. Вы можете записать сюда свой внутренний идентификатор|
+|**driver_id** <br/> *String*|Id исполнителя задачи|
+|**tracking_url** <br/> *String*|Короткая ссылка на браузерную версию карты с отслеживанием текущей задачи.|
+## Поле action {#task-status-and-progress-fields}
+## Поля status и progress {#task-status-and-progress-fields}
 
 {% method -%}
 ## Создание исполнителя {#driver-create}
