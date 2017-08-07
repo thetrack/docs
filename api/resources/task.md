@@ -146,8 +146,8 @@ $ curl https://api.thetrack.io/v1/tasks/TASK_ID/ \
 {% endmethod %}
 
 {% method -%}
-## Получение списка всех задач {#task-list}
-Получает список всех задач.
+## Получение списка задач {#task-list}
+Получает список задач.
 ### HTTP-запрос
 GET https://api.thetrack.io/v1/tasks/
 ### Возвращает
