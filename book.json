@@ -1,5 +1,5 @@
 {
-    "plugins": ["theme-api", "page-toc", "-sharing", "-fontsettings"],
+    "plugins": ["theme-api", "page-toc", "-sharing"],
     "pluginsConfig": {
         "theme-api": {
             "theme": "light",
@@ -9,4 +9,3 @@
             "selector": ".markdown-section h2"
         }
     }
-}
