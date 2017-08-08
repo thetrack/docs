@@ -10,8 +10,8 @@ p {
 // Отключить настройки выбора шрифта и темы от fontsettings в верхнем меню
 .font-settings {
   display: none;
+  opacity: 0;
 }
-
 
 li.divider {
     display: none;
@@ -23,4 +23,5 @@ li.divider {
 
 a.gitbook-link {
     display: none;
+    opacity: 0;
 }
