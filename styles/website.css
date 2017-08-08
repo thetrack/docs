@@ -11,3 +11,7 @@ p {
 .font-settings {
   display: none;
 }
+
+.summary > li:first-child:not(.header) {
+    display: none;
+}
