@@ -12,6 +12,15 @@ p {
   display: none;
 }
 
+
+li.divider {
+    display: none;
+}
+
 .summary > li:first-child:not(.header) {
+    display: none;
+}
+
+a.gitbook-link {
     display: none;
 }
