@@ -6,8 +6,7 @@
             "split": true
         },
         "page-toc": {
-            "selector": ".markdown-section h2",
-            "position": "top"
+            "selector": ".markdown-section h2"
         }
     }
 }
