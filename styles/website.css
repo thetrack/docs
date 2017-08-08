@@ -1,3 +1,7 @@
+body, .book.font-family-1, .book-summary, .book-header {
+  font-family: 'Fira Sans', sans-serif !important;
+}
+
 .page-toc {
     float: none;
     width: 300px;
