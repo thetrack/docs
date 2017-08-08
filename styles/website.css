@@ -6,3 +6,8 @@ p {
     float: none;
     width: 300px;
 }
+
+// Отключить настройки выбора шрифта и темы от fontsettings в верхнем меню
+.font-settings {
+  display: none;
+}
