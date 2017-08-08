@@ -1,5 +1,9 @@
 body, .book.font-family-1, .book-summary, .book-header {
-  font-family: 'Fira Sans', sans-serif !important;
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
+p {
+    font-family: Verdana, sans-serif !important;
 }
 
 .page-toc {
