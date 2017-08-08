@@ -1,5 +1,5 @@
 {
-    "plugins": ["theme-api", "page-toc"],
+    "plugins": ["theme-api", "page-toc", "-sharing"],
     "pluginsConfig": {
         "theme-api": {
             "theme": "light",
