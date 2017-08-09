@@ -48,6 +48,17 @@ curl https://api.thetrack.io/v1/tasks/ \
    -d @body.json
 ```
 
+```javascript
+// body.json
+{
+    "action": "delivery",
+    "location": {
+        "address": "ш. Ярославское 13"
+    },
+    "lookup_id": "1"
+}
+```
+
 Также можно использовать необязательное поле **committed\_eta**, определяющее установленные для задачи обязательства. Это поле используется для измерения соблюдения сроков.
 
 ```js
