@@ -11,33 +11,6 @@
 
 **[Driver](/api/objects/driver.md)** - это лицо или устройство которое нам необходимо отслеживать. В нашем случае мы создадим курьера с автомобилем, именем Иван Диктирёв и произвольным номером телефона.
 
-{% sample lang="curl" %}
-```bash
-$ curl https://api.thetrack.io/v1/drivers/ \
-   -H "Authorization: token sk_token" \
-   -H "Content-Type: application/json" \
-   -X POST \
-   -d @body.json
-```
-
-{% sample lang="python" -%}
-```python
->>> import requests
->>> headers = {'Authorization': 'token sk_token'}
->>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=@body.json, headers=headers)
-```
-
-{% common %}
-```js
-// @body.json sample
-{
-    "name": "Иван Диктирёв",
-    "phone": "+79263332211",
-    "vehicle_type": "car",
-    "lookup_id": "your_internal_id"
-}
-```
-
 API возвращает объект исполнителя с его идентификатором. Этот идентификатор может использоваться для извлечения этого же объекта в будущем. Вам потребуется сохранить этот идентификатор в вашей базе данных, чтобы использовать его для последующих вызовов.
 
 ```js
@@ -53,6 +26,33 @@ API возвращает объект исполнителя с его иден�
         "coordinates": []
     },
     "lookup_id": "your_internal_id"
+}
+```
+
+{% sample lang="curl" %}
+```bash
+$ curl https://api.thetrack.io/v1/drivers/ \
+-H "Authorization: token sk_token" \
+-H "Content-Type: application/json" \
+-X POST \
+-d @body.json
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/drivers/", json=@body.json, headers=headers)
+```
+
+{% common %}
+```js
+// @body.json sample
+{
+"name": "Иван Диктирёв",
+"phone": "+79263332211",
+"vehicle_type": "car",
+"lookup_id": "your_internal_id"
 }
 ```
 {% endmethod %}
