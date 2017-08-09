@@ -181,7 +181,7 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 {% endmethod %}
 
 {% method -%}
-## Привязка задач к объекту Driver {#driver-assign-task}
+## Привязка задач к объекту Driver {#assign-task}
 Привязывает задачи к объекту Driver.
 
 ### HTTP-запрос
