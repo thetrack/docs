@@ -141,7 +141,7 @@ curl https://api.thetrack.io/v1/tasks/ \
 
 {% sample lang="curl" %}
 ```bash
-curl https://api.thetrack.io/v1/drivers/<DRIVER_ID>/assign_tasks/ \
+curl https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/assign_tasks/ \
    -H "Authorization: token sk_token" \
    -H "Content-Type: application/json" \
    -X POST \
