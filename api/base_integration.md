@@ -127,9 +127,11 @@ curl https://api.thetrack.io/v1/tasks/ \
 ```
 {% endmethod %}
 
+{% method %}
 ### **Шаг 3: Назначение задачи исполнителю**
 После того как будет создана задача её можно будет [назначить](/api/objects/driver.md#assign-task) конкретному исполнителю. Это даст нам возможность отслеживать передвижение курьера по конкретной задачи.
 
+{% sample lang="curl" %}
 ```bash
 curl https://api.thetrack.io/v1/drivers/<DRIVER_ID>/assign_tasks/ \
    -H "Authorization: token sk_token" \
@@ -138,6 +140,22 @@ curl https://api.thetrack.io/v1/drivers/<DRIVER_ID>/assign_tasks/ \
    -d @body.json
 ```
 
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/drivers/875f2517-def3-4951-be01-3402eac6ea4d/assign_tasks/", json=@body.json, headers=headers)
+```
+
+{% common -%}
+```js
+// @body.json
+{
+    "task_ids": ["a6085218-cf32-4d4e-9649-c96715ce4ef5"]
+}
+```
+
+{% common -%}
 В ответ мы получим объект Driver с заполненным полем active\_tasks. В этом поле находятся все задачи которые были назначены на исполнителя и которые он последовательно будет выполнять.
 
 ```js
@@ -175,6 +193,4 @@ curl https://api.thetrack.io/v1/drivers/<DRIVER_ID>/assign_tasks/ \
     "lookup_id": "1232"
 }
 ```
-
-
-
+{% endmethod %}
