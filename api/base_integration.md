@@ -154,10 +154,12 @@ curl https://api.thetrack.io/v1/drivers/<DRIVER_ID>/assign_tasks/ \
     "task_ids": ["a6085218-cf32-4d4e-9649-c96715ce4ef5"]
 }
 ```
+{% endmethod %}
 
-{% common -%}
+{% method %}
 В ответ мы получим объект Driver с заполненным полем active\_tasks. В этом поле находятся все задачи которые были назначены на исполнителя и которые он последовательно будет выполнять.
 
+{% common -%}
 ```js
 {
     "id": "875f2517-def3-4951-be01-3402eac6ea4d",
