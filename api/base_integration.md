@@ -48,8 +48,7 @@ curl https://api.thetrack.io/v1/tasks/ \
    -d @body.json
 ```
 
-```javascript
-// body.json
+```
 {
     "action": "delivery",
     "location": {
