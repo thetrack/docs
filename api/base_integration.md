@@ -61,34 +61,6 @@ $ curl https://api.thetrack.io/v1/drivers/ \
 ### **Шаг 2: Создание объекта Task**
 Каждое действие выполняемое исполнителем может быть представлено как задача ([Task](/api/objects/task.md)). Например приложение для доставки может отслеживать получения, доставки или возвраты. А приложение для обслуживания клиентов посещения, оплату или встречи. В нашем случае мы создаем задачу с действием **deleivery** и местом назначения где клиент ожидает заказ от курьера.
 
-{% sample lang="curl" %}
-```bash
-curl https://api.thetrack.io/v1/tasks/ \
-   -H "Authorization: token sk_token" \
-   -H "Content-Type: application/json" \
-   -X POST \
-   -d @body.json
-```
-
-{% sample lang="python" -%}
-```python
->>> import requests
->>> headers = {'Authorization': 'token sk_token'}
->>> r = requests.post("https://api.thetrack.io/v1/tasks/", json=@body.json, headers=headers)
-```
-
-{% common -%}
-```js
-// @body.json
-{
-    "action": "delivery",
-    "location": {
-        "address": "ш. Ярославское 11"
-    },
-    "lookup_id": "1"
-}
-```
-
 > **Заметка**
 > Также можно использовать необязательное поле **committed\_eta**, определяющее установленные для задачи обязательства. Это поле используется для измерения соблюдения сроков.
 
@@ -123,6 +95,34 @@ curl https://api.thetrack.io/v1/tasks/ \
     "lookup_id": "123",
     "driver_id": null,
     "tracking_url": "http://eta.st/rasFkN"
+}
+```
+
+{% sample lang="curl" %}
+```bash
+curl https://api.thetrack.io/v1/tasks/ \
+   -H "Authorization: token sk_token" \
+   -H "Content-Type: application/json" \
+   -X POST \
+   -d @body.json
+```
+
+{% sample lang="python" -%}
+```python
+>>> import requests
+>>> headers = {'Authorization': 'token sk_token'}
+>>> r = requests.post("https://api.thetrack.io/v1/tasks/", json=@body.json, headers=headers)
+```
+
+{% common -%}
+```js
+// @body.json
+{
+    "action": "delivery",
+    "location": {
+        "address": "ш. Ярославское 11"
+    },
+    "lookup_id": "1"
 }
 ```
 {% endmethod %}
