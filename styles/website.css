@@ -25,3 +25,7 @@ a.gitbook-link {
     display: none;
     opacity: 0;
 }
+
+.api-method-example img {
+    width: 200pt;
+}
