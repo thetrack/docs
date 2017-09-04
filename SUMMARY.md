@@ -2,7 +2,8 @@
 
 * [Введение](README.md)
 * [Мобильные SDK](mobile/README.md)
-  * [Android SDK Водителя](mobile/android-sdk-voditelya.md)
+  * [Android](mobile/android/README.md)
+     * [Установка](mobile/android/setup.md)
 * [API](api/README.md)
   * [Базовая интеграция](api/base_integration.md)
   * [Объекты](api/objects/README.md)
