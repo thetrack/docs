@@ -9,6 +9,7 @@
 {% method %}
 #### Через API
 Для этого нужно создать объект Driver [ссылка как это сделать](/api/objects/driver.md#driver-create). И затем подключить его в SDK по его id.
+
 {% sample lang="java" %}
 ```java
 mTheTrack.getDriver(DRIVER_ID, new ThetrackCallback<DriverModel>() {
@@ -60,6 +61,7 @@ mTheTrack.getOrCreateDriver(driverParams, new ThetrackCallback<DriverModel>() {
 {% method %}
 ### **Шаг 2: Запустить трекинг на мобильном устройстве**
 После создания или получения ранее созданного объекта водителя мы можем запустить отслеживание. Для этого нужно вызвать метод `startTracking`.
+
 {% sample lang="java" %}
 ```java
 mTheTrack.startTracking(new ThetrackCallback<Void>() {
