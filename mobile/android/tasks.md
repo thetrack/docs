@@ -23,8 +23,8 @@ mTheTrack.getTasks(new ThetrackCallback<List<TaskModel>>() {
 ```
 {% endmethod %}
 
-{% method %}
 ## Завершение активной задачи
+{% method %}
 После того как исполнитель завершил задачу необходимо вызвать метод `completeCurrentTask`. После чего текущая активная задача будет завершена и автоматически запуститься следующая в очереди задача.
 
 {% sample lang="java" %}
@@ -45,8 +45,8 @@ mTheTrack.completeCurrentTask(new ThetrackCallback<TaskModel>() {
 ```
 {% endmethod %}
 
-{% method %}
 ## Отмена активной задачи
+{% method %}
 Если по каким либо причинам исполнитель не может продолжать выполнение текущей задачи нужно вызвать метод `cancelCurrentTask`. После чего будет автоматически запущена следующая задача в очереди.
 
 > Заметка

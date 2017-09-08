@@ -5,8 +5,8 @@
 ## **Шаг 1: Создайте водителя**
 Для начала отслеживания нужно создать объект Driver. Вы можете создать его двумя путями, через API или через SDK.
 
-{% method %}
 ### Через API
+{% method %}
 Для этого нужно создать объект Driver ([ссылка как это сделать](/api/objects/driver.md#driver-create)). И затем подключить его в SDK по его id.
 
 {% sample lang="java" %}
@@ -27,8 +27,8 @@ mTheTrack.getDriver(DRIVER_ID, new ThetrackCallback<DriverModel>() {
 ```
 {% endmethod %}
 
-{% method %}
 ### Через SDK
+{% method %}
 Для этого нужно передать объект с заполненными параметрами в метод `getOrCreateDriver`.
 
 > Заметка.
@@ -58,8 +58,8 @@ mTheTrack.getOrCreateDriver(driverParams, new ThetrackCallback<DriverModel>() {
 ```
 {% endmethod %}
 
-{% method %}
 ## **Шаг 2: Запустите мониторинг**
+{% method %}
 После создания или получения ранее созданного объекта водителя можно запустить мониторинг. Для этого нужно вызвать метод `startTracking`.
 
 {% sample lang="java" %}
@@ -80,8 +80,8 @@ mTheTrack.startTracking(new ThetrackCallback<Void>() {
 ```
 {% endmethod %}
 
-{% method %}
 ## **Шаг 3 (Дополнительный): Остановите мониторинг** {#android-stop-monitoring}
+{% method %}
 Если логика работы вашего приложение требует мониторить ресурсы не постоянно, то вы можете остановить мониторинг с помощью метода `stopTracking`.
 
 > Заметка
