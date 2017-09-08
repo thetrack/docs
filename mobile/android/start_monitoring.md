@@ -79,3 +79,29 @@ mTheTrack.startTracking(new ThetrackCallback<Void>() {
 });
 ```
 {% endmethod %}
+
+{% method %}
+### **Шаг 3 (Дополнительный): Остановка мониторинга**
+Если логика работы вашего приложение требует мониторить ресурсы не постоянно, то вы можете остановить мониторинг с помощью метода `stopTracking`.
+
+> Заметка
+> Остановка мониторинга не завершает и не отменяет текущую активную задачу. Для этого необходимо самостоятельно вызвать соответствующие методы после остановки мониторинга в методе колбэка onSuccess(). Подробнее о методах остановки задач смотрите в [руководстве по работе с задачами](/mobile/android/tasks_flow.md).
+
+{% sample lang="java" %}
+```java
+mTheTrack.stopTracking(new ThetrackCallback<Void>() {
+    @Override
+    public void onSuccess(Void result) {
+        String msg = "Мониторинг остановлен";
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onError(@NonNull Throwable throwable) {
+        String msg = "Ошибка остановки мониторинга: " + throwable;
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+    }
+});
+```
+{% endmethod %}
+
