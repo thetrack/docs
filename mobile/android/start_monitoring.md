@@ -31,6 +31,7 @@ mTheTrack.getDriver(DRIVER_ID, new ThetrackCallback<DriverModel>() {
 #### Через SDK
 Для этого нужно передать объект с заполненными параметрами в метод `getOrCreateDriver`.
 
+> Заметка.
 > Если еще раз попытаться создать объект Driver с одним и тем же `LookupID` то повторно объект создан не будет, а будет получен ранее созданный объект с таким же `LookupID`.
 
 {% sample lang="java" %}
