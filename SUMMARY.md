@@ -4,7 +4,7 @@
 * [Мобильные SDK](mobile/README.md)
   * [Android](mobile/android/README.md)
      * [Установка](mobile/android/setup.md)
-     * [Запуск отслеживания](mobile/android/start_tracking.md)
+     * [Запуск мониторинга](mobile/android/start_monitoring.md)
 * [API](api/README.md)
   * [Базовая интеграция](api/base_integration.md)
   * [Объекты](api/objects/README.md)
