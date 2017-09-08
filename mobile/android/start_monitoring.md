@@ -58,7 +58,7 @@ mTheTrack.getOrCreateDriver(driverParams, new ThetrackCallback<DriverModel>() {
 {% endmethod %}
 
 {% method %}
-### **Шаг 2: Запустите мониторинг на мобильном устройстве**
+### **Шаг 2: Запустите мониторинг**
 После создания или получения ранее созданного объекта водителя можно запустить мониторинг. Для этого нужно вызвать метод `startTracking`.
 
 {% sample lang="java" %}
