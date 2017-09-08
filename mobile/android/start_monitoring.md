@@ -2,12 +2,12 @@
 ---
 Для начала мониторинга ваших мобильных ресурсов нам необходимо выполнить несколько шагов.
 
-### **Шаг 1: Создать водителя**
+### **Шаг 1: Создайте водителя**
 Для начала отслеживания нужно создать объект Driver. Вы можете создать его двумя путями, через API или через SDK. 
 
 {% method %}
 #### Через API
-Для этого нужно создать объект Driver [ссылка как это сделать](/api/objects/driver.md#driver-create). И затем подключить его в SDK по его id.
+Для этого нужно создать объект Driver ([ссылка как это сделать](/api/objects/driver.md#driver-create)). И затем подключить его в SDK по его id.
 
 {% sample lang="java" %}
 ```java
@@ -58,21 +58,21 @@ mTheTrack.getOrCreateDriver(driverParams, new ThetrackCallback<DriverModel>() {
 {% endmethod %}
 
 {% method %}
-### **Шаг 2: Запустить трекинг на мобильном устройстве**
-После создания или получения ранее созданного объекта водителя мы можем запустить отслеживание. Для этого нужно вызвать метод `startTracking`.
+### **Шаг 2: Запустите мониторинг на мобильном устройстве**
+После создания или получения ранее созданного объекта водителя можно запустить мониторинг. Для этого нужно вызвать метод `startTracking`.
 
 {% sample lang="java" %}
 ```java
 mTheTrack.startTracking(new ThetrackCallback<Void>() {
     @Override
     public void onSuccess(Void result) {
-        String msg = "Отслеживание запущенно";
+        String msg = "Мониторинг запущен";
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onError(@NonNull Throwable throwable) {
-        String msg = "Ошибка пуска: " + throwable;
+        String msg = "Ошибка запуска мониторинга: " + throwable;
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 });
