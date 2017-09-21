@@ -1,5 +1,5 @@
 {
-    "plugins": ["theme-api", "page-toc", "-sharing"],
+    "plugins": ["theme-api", "page-toc", "-sharing", "ga"],
     "pluginsConfig": {
         "theme-api": {
             "theme": "light",
@@ -7,6 +7,9 @@
         },
         "page-toc": {
             "selector": ".markdown-section h2"
+        },
+        "ga": {
+            "token": "UA-106855122-1"
         }
     }
 }
